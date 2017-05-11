@@ -1,0 +1,15 @@
+version: '2'
+services:
+  war-compilator:
+    image: maven-compilator:0.1
+    container_name: maven-compilator
+    build:
+      context: ./maven-compilator
+      dockerfile: Dockerfile
+      args:
+        - JAVA_VERSION=7
+        - MVN_VERSION=3.1.1
+    environment:
+      - COMMAND
+    volumes:
+     - /src

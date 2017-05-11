@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#=====================
+# Start mvn command
+#=====================
+
+echo && echo "STARTING MAVEN COMMAND..." && sleep 2
+cd $SRC_PATH && $COMMAND && exit
